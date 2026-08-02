@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheen Kher — Content Strategy Dossier</title>
+<meta name="description" content="Sheen Kher's content strategy portfolio: framework, sample case study, and AI search optimization approach for a Senior Content Strategist role.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1F3B;
+    --paper:#FBF9F4;
+    --paper-2:#F3F0E8;
+    --amber:#E8A33D;
+    --slate:#6B7280;
+    --line:#D8D3C7;
+    --citation:#3F6C51;
+    --citation-bg:#E9F0EA;
+    --display: 'Fraunces', serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  a{color:inherit;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--slate);
+  }
+
+  .citation-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.04em;
+    color:var(--citation);
+    background:var(--citation-bg);
+    border:1px solid rgba(63,108,81,0.25);
+    padding:2px 8px;
+    border-radius:3px;
+    vertical-align:middle;
+  }
+  .citation-tag::before{content:"⌗";}
+
+  .sample-flag{
+    display:inline-block;
+    font-family:var(--mono);
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--amber);
+    border:1px solid var(--amber);
+    padding:3px 10px;
+    border-radius:3px;
+    margin-bottom:14px;
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .shell{
+    display:grid;
+    grid-template-columns:64px 1fr;
+  }
+  @media (max-width:840px){
+    .shell{grid-template-columns:1fr;}
+  }
+
+  /* Side index */
+  .index-rail{
+    position:sticky;
+    top:0;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:28px 0;
+    border-right:1px solid var(--line);
+    background:var(--paper);
+  }
+  @media (max-width:840px){
+    .index-rail{
+      position:sticky;
+      height:auto;
+      flex-direction:row;
+      overflow-x:auto;
+      width:100%;
+      border-right:none;
+      border-bottom:1px solid var(--line);
+      padding:12px 16px;
+      gap:18px;
+      z-index:50;
+    }
+  }
+  .index-rail .mark{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.1rem;
+    margin-bottom:40px;
+    writing-mode:vertical-rl;
+    letter-spacing:0.05em;
+  }
+  @media (max-width:840px){
+    .index-rail .mark{writing-mode:horizontal-tb; margin-bottom:0;}
+  }
+  .index-links{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+    flex:1;
+  }
+  @media (max-width:840px){
+    .index-links{flex-direction:row; gap:20px;}
+  }
+  .index-links a{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    color:var(--slate);
+    text-decoration:none;
+    writing-mode:vertical-rl;
+    letter-spacing:0.05em;
+    white-space:nowrap;
+    transition:color 0.25s ease;
+    padding:2px 0;
+    border-right:2px solid transparent;
+  }
+  @media (max-width:840px){
+    .index-links a{writing-mode:horizontal-tb;}
+  }
+  .index-links a.active{
+    color:var(--ink);
+    border-right-color:var(--amber);
+  }
+  @media (max-width:840px){
+    .index-links a.active{border-right:none; border-bottom:2px solid var(--amber);}
+  }
+
+  main{max-width:920px; margin:0 auto; padding:0 32px;}
+  @media (max-width:600px){main{padding:0 18px;}}
+
+  /* Hero */
+  .hero{
+    min-height:82vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:40px 0;
+  }
+  .hero .eyebrow{margin-bottom:18px;}
+  .hero h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(2.6rem, 6vw, 4.6rem);
+    line-height:1.05;
+    margin:0 0 20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    font-weight:500;
+    color:var(--citation);
+  }
+  .hero p.lede{
+    font-size:1.15rem;
+    color:var(--slate);
+    max-width:52ch;
+    margin:0 0 30px;
+  }
+  .hero .role-line{
+    font-family:var(--mono);
+    font-size:0.8rem;
+    color:var(--ink);
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+  }
+
+  section{
+    padding:120px 0;
+    border-bottom:1px solid var(--line);
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  section.visible{opacity:1; transform:translateY(0);}
+  section:last-of-type{border-bottom:none;}
+
+  .sec-head{margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--mono);
+    color:var(--amber);
+    font-size:0.85rem;
+  }
+  .sec-head h2{
+    font-family:var(--display);
+    font-size:clamp(1.8rem, 3.4vw, 2.6rem);
+    font-weight:600;
+    margin:8px 0 6px;
+  }
+  .sec-head .sub{
+    color:var(--slate);
+    font-size:1rem;
+  }
+
+  .card{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:28px 30px;
+    margin-bottom:20px;
+  }
+  .card h3{
+    font-family:var(--body);
+    font-weight:600;
+    font-size:1.02rem;
+    margin:0 0 10px;
+  }
+  .card p{margin:0; color:var(--ink);}
+
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media (max-width:700px){
+    .grid-3{grid-template-columns:1fr;}
+    .grid-2{grid-template-columns:1fr;}
+  }
+
+  .step-list{list-style:none; margin:0; padding:0; counter-reset:step;}
+  .step-list li{
+    counter-increment:step;
+    display:grid;
+    grid-template-columns:52px 1fr;
+    gap:18px;
+    padding:20px 0;
+    border-top:1px solid var(--line);
+  }
+  .step-list li:first-child{border-top:none;}
+  .step-list li::before{
+    content:counter(step, decimal-leading-zero);
+    font-family:var(--mono);
+    color:var(--amber);
+    font-size:0.9rem;
+  }
+  .step-list h4{margin:0 0 6px; font-size:1rem; font-weight:600;}
+  .step-list p{margin:0; color:var(--slate); font-size:0.95rem;}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:0.88rem;
+  }
+  th,td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--slate);
+    font-weight:500;
+  }
+  .table-wrap{overflow-x:auto; margin-bottom:10px;}
+
+  .rewrite-cols{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  @media (max-width:700px){.rewrite-cols{grid-template-columns:1fr;}}
+  .rewrite-col{border:1px solid var(--line); border-radius:4px; padding:22px;}
+  .rewrite-col.before{background:#F6F1EC;}
+  .rewrite-col.after{background:var(--citation-bg);}
+  .rewrite-col .tag{
+    font-family:var(--mono);
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:12px;
+    display:block;
+  }
+  .rewrite-col.before .tag{color:#A6572E;}
+  .rewrite-col.after .tag{color:var(--citation);}
+  .rewrite-col p{font-size:0.92rem;}
+
+  .kpi-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px;}
+  @media (max-width:700px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
+  .kpi{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:18px;
+    background:var(--paper-2);
+  }
+  .kpi .num{
+    font-family:var(--display);
+    font-size:1.9rem;
+    font-weight:600;
+  }
+  .kpi .label{
+    font-family:var(--mono);
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    color:var(--slate);
+    margin-top:4px;
+  }
+
+  .quote-block{
+    border-left:3px solid var(--amber);
+    padding-left:22px;
+    font-family:var(--display);
+    font-style:italic;
+    font-size:1.25rem;
+    color:var(--ink);
+    margin:26px 0;
+  }
+
+  footer{
+    padding:60px 0 90px;
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--slate);
+  }
+  footer a{text-decoration:underline; color:var(--ink);}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <nav class="index-rail" id="indexRail">
+    <div class="mark">SK</div>
+    <div class="index-links">
+      <a href="#about" data-target="about">01 About</a>
+      <a href="#framework" data-target="framework">02 Framework</a>
+      <a href="#case-study" data-target="case-study">03 Case Study</a>
+      <a href="#ai-search" data-target="ai-search">04 AI Search</a>
+      <a href="#calendar" data-target="calendar">05 Calendar</a>
+      <a href="#process" data-target="process">06 Process</a>
+      <a href="#rewrite" data-target="rewrite">07 Rewrite</a>
+      <a href="#metrics" data-target="metrics">08 Metrics</a>
+      <a href="#lessons" data-target="lessons">09 Lessons</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" style="opacity:1; transform:none; border-bottom:none; padding-bottom:0;">
+      <div class="eyebrow">Content Strategy Dossier</div>
+      <h1>Sheen Kher<br><em>writes the plan,<br>not just the page.</em></h1>
+      <p class="lede">A working document of how I think about content strategy in a search landscape where AI answer engines now decide what a buyer sees before they ever land on a site.</p>
+      <div class="role-line">
+        <span>Senior Content Strategist — Application Dossier</span>
+        <span>SEO + AEO</span>
+        <span>Strategy, not just execution</span>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="sec-head">
+        <div class="sec-num">01</div>
+        <h2>Who I am as a strategist</h2>
+        <div class="sub">A brief introduction to my background and philosophy</div>
+      </div>
+      <p>I come to content strategy from a background of managing complex, cross-functional delivery — the kind of work where you're translating what a business needs into a plan multiple teams can actually execute against, and then defending that plan when the data says to change course. That instinct is exactly what I bring to content: treating it as a system to be architected, not a queue of pieces to be produced.</p>
+      <p>My interest in SEO and content strategy has increasingly centered on one shift: <strong>AI answer engines have changed who the real audience is.</strong> A page no longer only needs to persuade a human reader — it needs to be structured clearly enough that an AI system can extract it, trust it, and cite it correctly. I care about content strategy that holds up under both of those readers at once: the person who lands on the page, and the system that decides whether they ever needed to.</p>
+      <p>The sections below walk through how I'd approach that work in practice — from the framework I use to plan strategy, through a sample project, to how I'd measure whether any of it actually worked.</p>
+    </section>
+
+    <section id="framework">
+      <div class="sec-head">
+        <div class="sec-num">02</div>
+        <h2>How I approach content strategy</h2>
+        <div class="sub">A five-stage framework, not a task list</div>
+      </div>
+      <ol class="step-list">
+        <li>
+          <h4>Understand the business goal, not the content request</h4>
+          <p>Before any topic list exists, I want to know what business outcome content is actually meant to move — pipeline, retention, category authority — because that goal determines what "good" content even means for this account.</p>
+        </li>
+        <li>
+          <h4>Audience and search-behavior research</h4>
+          <p>Mapping who the buyer is, what they ask a search engine versus what they ask an AI assistant, and where those two behaviors diverge. This is where I decide which content needs to win a ranking versus win a citation.</p>
+        </li>
+        <li>
+          <h4>Content architecture and planning</h4>
+          <p>Turning research into a structure: topic clusters, entity relationships, and a prioritized roadmap — the calendar comes later, this is the skeleton it hangs on.</p>
+        </li>
+        <li>
+          <h4>Execution with dual optimization</h4>
+          <p>Every piece is built to satisfy both a traditional ranking algorithm and an AI extraction pass — clear entity definitions, scannable structure, and schema where it earns its place.</p>
+        </li>
+        <li>
+          <h4>Measurement and iteration</h4>
+          <p>Reviewing what actually moved — traffic, citations, conversions — and being willing to kill or redirect a plan that isn't earning its budget, rather than defending it out of sunk cost.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="case-study">
+      <div class="sec-head">
+        <div class="sec-num">03</div>
+        <h2>A strategy I built and evolved</h2>
+        <div class="sub">Sample project, built to demonstrate strategic thinking</div>
+      </div>
+      <span class="sample-flag">Illustrative sample — not a real client engagement</span>
+
+      <div class="card">
+        <h3>The business problem</h3>
+        <p>Brightleaf Analytics, a fictional B2B SaaS company, was losing organic pipeline even as its keyword rankings held steady. The pattern: traffic was flat, but demo requests attributed to organic content had dropped over two quarters.</p>
+      </div>
+      <div class="card">
+        <h3>Research</h3>
+        <p>A content audit showed most cornerstone pages were written and structured for keyword ranking — long intros, dense paragraphs, no clear answer up front — with almost nothing formatted in a way an AI answer engine could confidently extract and cite. Buyers had started using AI tools earlier in their research, and Brightleaf's content simply wasn't showing up there.</p>
+      </div>
+      <div class="card">
+        <h3>Strategy <span class="citation-tag">pivot point</span></h3>
+        <p>The strategy shifted from "rank for more keywords" to "become the cited source for the category's core questions." That meant consolidating overlapping pages into clear topic clusters, rewriting cornerstone content to lead with direct answers, and treating citation potential as a planning input alongside search volume — not an afterthought.</p>
+      </div>
+      <div class="card">
+        <h3>Execution</h3>
+        <p>Rebuilt the top 12 cornerstone pages around question-based H2s and direct-answer openings, added FAQ schema where content was genuinely structured as Q&A, and built an internal linking backbone connecting cluster pages back to a small set of pillar pages.</p>
+      </div>
+      <div class="card">
+        <h3>Results <span class="citation-tag">illustrative figures</span></h3>
+        <p>Over the following two quarters (illustrative): organic-attributed demo requests recovered and grew roughly 22%, average time-to-first-citation in AI-generated answers for tracked queries improved, and three previously flat pillar pages began appearing consistently in AI Overview responses for their target questions.</p>
+      </div>
+      <div class="quote-block">The real pivot wasn't the rewrite — it was changing what we measured as "working" before deciding anything needed to change.</div>
+    </section>
+
+    <section id="ai-search">
+      <div class="sec-head">
+        <div class="sec-num">04</div>
+        <h2>Preparing content for AI-powered discovery</h2>
+        <div class="sub">SEO and AEO, treated as one discipline</div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Entity optimization</h3>
+          <p>Naming people, products, and concepts clearly and consistently, and linking them to authoritative external context, so AI systems can confidently identify what a page is actually about.</p>
+        </div>
+        <div class="card">
+          <h3>Schema markup</h3>
+          <p>Structured data — especially FAQPage — used only where the content genuinely matches the format, mapping directly to how people phrase questions to AI tools.</p>
+        </div>
+        <div class="card">
+          <h3>Topical authority</h3>
+          <p>Building clusters that fully cover a subject's question tree, not single pages hoping to rank for one keyword in isolation.</p>
+        </div>
+        <div class="card">
+          <h3>Citation potential</h3>
+          <p>Writing direct, extractable answers near the top of a section — content that reads correctly even when quoted alone, out of context, by an AI system.</p>
+        </div>
+        <div class="card">
+          <h3>Structured content & FAQs</h3>
+          <p>Clear heading hierarchy, scannable formatting, and genuine FAQ sections that anticipate the exact questions a buyer would type into an AI assistant.</p>
+        </div>
+        <div class="card">
+          <h3>E-E-A-T principles</h3>
+          <p>Demonstrating real experience and expertise in the content itself — credible sourcing, named authorship, and specificity — since AI systems increasingly weigh trust signals when choosing what to cite.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="calendar">
+      <div class="sec-head">
+        <div class="sec-num">05</div>
+        <h2>Turning strategy into an actionable roadmap</h2>
+        <div class="sub">Sample editorial calendar</div>
+      </div>
+      <span class="sample-flag">Illustrative sample</span>
+      <div class="table-wrap">
+        <table>
+          <tr>
+            <th>Topic</th><th>Funnel Stage</th><th>Format</th><th>SEO Opportunity</th><th>AI-Citation Angle</th>
+          </tr>
+          <tr>
+            <td>What is [category] and how does it work</td><td>Awareness</td><td>Pillar page</td><td>High-volume definitional query</td><td>Direct-answer format, strong FAQ candidate</td>
+          </tr>
+          <tr>
+            <td>[Category] vs. [alternative approach]</td><td>Consideration</td><td>Comparison guide</td><td>Comparison-intent search terms</td><td>Structured table format, high extraction value</td>
+          </tr>
+          <tr>
+            <td>How to evaluate a [category] vendor</td><td>Consideration</td><td>Checklist / guide</td><td>Buyer-research long-tail terms</td><td>Numbered criteria, easy to cite as a list</td>
+          </tr>
+          <tr>
+            <td>Customer implementation story</td><td>Decision</td><td>Case study</td><td>Branded + solution-intent terms</td><td>Named entities, quotable results</td>
+          </tr>
+          <tr>
+            <td>Common [category] mistakes to avoid</td><td>Awareness/Consideration</td><td>Listicle + FAQ</td><td>Problem-aware search queries</td><td>FAQ schema, question-based subheads</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="sec-head">
+        <div class="sec-num">06</div>
+        <h2>How great content gets produced</h2>
+        <div class="sub">Editorial workflow, and where AI tools fit</div>
+      </div>
+      <ol class="step-list">
+        <li><h4>Ideation & research</h4><p>Topic sourced from strategy roadmap, validated against real search and AI-query behavior. AI tools help synthesize research fast; the topic call itself stays human.</p></li>
+        <li><h4>Brief & drafting</h4><p>A structured brief — audience, intent, target entities, question set — before drafting starts. AI tools accelerate first-draft structure; judgment on argument and nuance stays human.</p></li>
+        <li><h4>SEO & AEO optimization pass</h4><p>Headings, schema candidates, and entity clarity reviewed against both traditional SEO and citation-readiness criteria.</p></li>
+        <li><h4>Stakeholder review</h4><p>Business and subject-matter stakeholders review for accuracy and positioning — the point where a strategist defends or adjusts the plan based on real pushback.</p></li>
+        <li><h4>Publish</h4><p>Content goes live with schema, internal links, and metadata fully in place — not added later as an afterthought.</p></li>
+        <li><h4>Post-publication monitoring</h4><p>Tracking rankings, AI citation appearances, and engagement, then feeding what's learned back into the next round of planning.</p></li>
+      </ol>
+    </section>
+
+    <section id="rewrite">
+      <div class="sec-head">
+        <div class="sec-num">07</div>
+        <h2>Improving content with strategy</h2>
+        <div class="sub">A before-and-after rewrite</div>
+      </div>
+      <span class="sample-flag">Illustrative sample</span>
+      <div class="rewrite-cols">
+        <div class="rewrite-col before">
+          <span class="tag">Before</span>
+          <p>"In today's fast-paced digital landscape, businesses are constantly looking for ways to improve their online presence. One important aspect that many companies overlook is the way their content is structured. There are many factors that go into building a strong content strategy, and in this article we'll explore some of them in detail..."</p>
+        </div>
+        <div class="rewrite-col after">
+          <span class="tag">After</span>
+          <p><strong>What is a content strategy framework?</strong> A content strategy framework is the repeatable process a team uses to turn business goals into published content — covering audience research, planning, execution, and measurement. Most frameworks fail at one of two points: skipping audience research, or never returning to measurement to adjust the plan.</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:20px;">
+        <h3>Why each change was made</h3>
+        <p>The original opens with three sentences of throat-clearing before saying anything — unusable by an AI system looking to extract a direct answer, and a slow start for a human reader too. The rewrite leads with the exact question a reader (or an AI system) would ask, answers it in the first sentence, and immediately adds a specific, useful detail rather than a vague promise of value later in the article. Clarity and citation-readiness improved together, not as a trade-off.</p>
+      </div>
+    </section>
+
+    <section id="metrics">
+      <div class="sec-head">
+        <div class="sec-num">08</div>
+        <h2>Measuring what matters</h2>
+        <div class="sub">Sample performance dashboard</div>
+      </div>
+      <span class="sample-flag">Illustrative sample</span>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="num">+22%</div><div class="label">Organic traffic QoQ</div></div>
+        <div class="kpi"><div class="num">4.1%</div><div class="label">Avg. CTR</div></div>
+        <div class="kpi"><div class="num">2:40</div><div class="label">Avg. engagement time</div></div>
+        <div class="kpi"><div class="num">3.8%</div><div class="label">Content-assisted conversion</div></div>
+        <div class="kpi"><div class="num">61</div><div class="label">Page-1 keyword rankings</div></div>
+        <div class="kpi"><div class="num">14</div><div class="label">AI Overview citations tracked</div></div>
+        <div class="kpi"><div class="num">9</div><div class="label">Distinct pages cited by AI tools</div></div>
+        <div class="kpi"><div class="num">3.2x</div><div class="label">Content ROI (directional)</div></div>
+      </div>
+      <p style="margin-top:24px; color:var(--slate);">Traffic and rankings tell me if content is findable. Engagement and conversion tell me if it's useful once found. AI citation count is the newer signal — it tells me whether content is trusted enough to be handed to a buyer secondhand, before they ever visit the site. All four get reviewed together before I call a strategy "working."</p>
+    </section>
+
+    <section id="lessons">
+      <div class="sec-head">
+        <div class="sec-num">09</div>
+        <h2>Continuous improvement as a strategist</h2>
+        <div class="sub">What I've learned, and where I think this is headed</div>
+      </div>
+      <p>The biggest shift in how I think about content strategy hasn't been a new tactic — it's a change in who counts as "the reader." For years, content strategy optimized entirely for a human decision at the end of a search. Now a meaningful share of that decision-making happens inside an AI system before a human ever lands on a page, which means structure and trustworthiness have become strategic decisions, not formatting details.</p>
+      <p>The clearest lesson from working through that shift: measuring the wrong thing for too long is more dangerous than any single bad piece of content. A strategy can look healthy on rankings alone while quietly losing the audience that matters most. Being willing to change what "success" means, and say so plainly to stakeholders, is a harder skill than any individual piece of execution.</p>
+      <div class="quote-block">Where I think this is headed: content strategy and technical SEO are going to keep merging with something closer to structured-data engineering. The strategists who stay valuable will be the ones fluent in both the story and the schema.</div>
+    </section>
+
+    <footer>
+      <div>Built as an application dossier for a Senior Content Strategist role. Case study, calendar, rewrite, and dashboard figures are illustrative samples, clearly labeled throughout.</div>
+      <div style="margin-top:14px;">Sheen Kher</div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // Scroll reveal
+  const sections = document.querySelectorAll('section[id]');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.12 });
+  sections.forEach(s => revealObserver.observe(s));
+
+  // Active index link tracking
+  const links = document.querySelectorAll('.index-links a');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const link = document.querySelector('.index-links a[data-target="' + id + '"]');
+      if (!link) return;
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4, rootMargin: '-10% 0px -60% 0px' });
+  sections.forEach(s => navObserver.observe(s));
+</script>
+
+</body>
+</html>

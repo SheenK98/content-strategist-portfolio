@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial Calendar | Sheen Kher</title>
+<meta name="description" content="A sample four-week editorial calendar across multiple client accounts, built for AI search optimization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1B1F3B; --paper:#FBF9F4; --paper-2:#F1EDE2;
+    --coral:#C1603E; --coral-bg:#F5E4DA;
+    --sage:#7FA88A; --sage-dark:#3F6C51; --sage-bg:#E7EFE7;
+    --slate:#6B7280; --line:#DCD5C4;
+    --display:'Fraunces', serif; --body:'Inter', sans-serif; --mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); line-height:1.6;}
+  a{color:inherit;}
+
+  .topnav{
+    position:sticky; top:0; z-index:100; background:rgba(251,249,244,0.94); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; padding:14px 32px;
+  }
+  .topnav .mark{font-family:var(--display); font-weight:700; font-size:1.3rem; text-decoration:none;}
+  .topnav .back{font-family:var(--mono); font-size:0.76rem; text-decoration:none; color:var(--ink); display:flex; align-items:center; gap:6px;}
+  .topnav .btn{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em; background:var(--sage); color:#fff; padding:9px 16px; border-radius:20px; text-decoration:none;}
+
+  main{max-width:1180px; margin:0 auto; padding:0 32px;}
+  @media (max-width:600px){main{padding:0 18px;}}
+
+  .page-head{padding:56px 0 26px; border-bottom:1px solid var(--line);}
+  .eyebrow{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--slate);}
+  .page-head h1{font-family:var(--display); font-weight:700; font-size:clamp(1.9rem,4vw,2.6rem); margin:12px 0 10px;}
+  .page-head p{color:var(--slate); max-width:66ch; font-size:1rem;}
+  .sample-flag{
+    display:inline-block; font-family:var(--mono); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--coral); border:1px solid var(--coral); padding:4px 11px; border-radius:3px; margin-top:14px;
+  }
+
+  .cal-wrap{padding:40px 0 70px;}
+  .week-block{margin-bottom:36px;}
+  .week-label{
+    font-family:var(--mono); font-size:0.74rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--coral);
+    margin-bottom:10px; display:flex; align-items:center; gap:10px;
+  }
+  .week-label::after{content:''; flex:1; height:1px; background:var(--line);}
+  .table-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:8px;}
+  table{width:100%; border-collapse:collapse; font-size:0.84rem; min-width:760px;}
+  th,td{text-align:left; padding:12px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  th{font-family:var(--mono); font-size:0.66rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--slate); font-weight:500; background:var(--paper-2);}
+  td.brand{font-weight:600;}
+  .stage{
+    display:inline-block; font-family:var(--mono); font-size:0.66rem; text-transform:uppercase; letter-spacing:0.03em;
+    padding:3px 9px; border-radius:10px;
+  }
+  .stage.tofu{background:var(--sage-bg); color:var(--sage-dark);}
+  .stage.mofu{background:var(--coral-bg); color:var(--coral);}
+  .stage.bofu{background:#E6E9F2; color:#3B4270;}
+
+  footer{padding:36px 0 60px; font-family:var(--mono); font-size:0.78rem; color:var(--slate); text-align:center;}
+  footer a{text-decoration:underline; color:var(--ink);}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a class="mark" href="index.html">SK</a>
+  <a class="back" href="index.html">&larr; Back to portfolio</a>
+  <a class="btn" href="mailto:kher.sheen@gmail.com">Get in touch</a>
+</nav>
+
+<main>
+  <div class="page-head">
+    <div class="eyebrow">Editorial Calendar</div>
+    <h1>A four-week roadmap across accounts</h1>
+    <p>Built to show how topics get prioritized by funnel stage, spread across formats and channels, and tagged with the specific reason each piece is likely to earn an AI citation.</p>
+    <span class="sample-flag">Illustrative sample. Brand names are example clients for demonstration, not real engagements.</span>
+  </div>
+
+  <div class="cal-wrap">
+
+    <div class="week-block">
+      <div class="week-label">Week 1</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Brand</th><th>Topic</th><th>Funnel Stage</th><th>Format</th><th>Channel</th><th>AI Citation Angle</th></tr>
+          <tr><td class="brand">Freshworks</td><td>CRM vs Customer Engagement Platform</td><td><span class="stage tofu">TOFU</span></td><td>Comparison Guide</td><td>Blog</td><td>Definition article optimized for ChatGPT & AI Overviews</td></tr>
+          <tr><td class="brand">Freshworks</td><td>The Future of AI Customer Support</td><td><span class="stage tofu">TOFU</span></td><td>Founder Thought Leadership</td><td>LinkedIn</td><td>Executive perspective likely to be quoted</td></tr>
+          <tr><td class="brand">Freshworks</td><td>Building an AI-powered Support Stack</td><td><span class="stage mofu">MOFU</span></td><td>Explainer Video</td><td>YouTube</td><td>Educational long-form video supporting authority</td></tr>
+          <tr><td class="brand">Razorpay</td><td>Payment Gateway vs Payment Processor</td><td><span class="stage tofu">TOFU</span></td><td>Pillar Article</td><td>Blog</td><td>Frequently asked AI search question</td></tr>
+          <tr><td class="brand">Razorpay</td><td>Biggest Payment Failures Indian Startups Make</td><td><span class="stage mofu">MOFU</span></td><td>Founder Post</td><td>LinkedIn</td><td>Opinion-driven content for executives</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="week-block">
+      <div class="week-label">Week 2</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Brand</th><th>Topic</th><th>Funnel Stage</th><th>Format</th><th>Channel</th><th>AI Citation Angle</th></tr>
+          <tr><td class="brand">Pine Labs</td><td>Modern POS Systems Explained</td><td><span class="stage tofu">TOFU</span></td><td>SEO Guide</td><td>Blog</td><td>Clear definitions for AI citations</td></tr>
+          <tr><td class="brand">Pine Labs</td><td>Embedded Finance Trends</td><td><span class="stage tofu">TOFU</span></td><td>Industry Report</td><td>Blog</td><td>Original research increases citation potential</td></tr>
+          <tr><td class="brand">Swiggy</td><td>What Makes Quick Commerce Scale?</td><td><span class="stage tofu">TOFU</span></td><td>Founder Thought Leadership</td><td>LinkedIn</td><td>Executive commentary around market trends</td></tr>
+          <tr><td class="brand">Swiggy</td><td>Quick Commerce Logistics Explained</td><td><span class="stage mofu">MOFU</span></td><td>Educational Video</td><td>YouTube</td><td>AI-friendly explainer with visual examples</td></tr>
+          <tr><td class="brand">Cross-client</td><td>State of AI Search in SaaS 2026</td><td><span class="stage tofu">TOFU</span></td><td>Research Report</td><td>Blog</td><td>Proprietary statistics for AI assistants</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="week-block">
+      <div class="week-label">Week 3</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Brand</th><th>Topic</th><th>Funnel Stage</th><th>Format</th><th>Channel</th><th>AI Citation Angle</th></tr>
+          <tr><td class="brand">InVideo</td><td>AI Video Marketing Playbook</td><td><span class="stage tofu">TOFU</span></td><td>Pillar Guide</td><td>Blog</td><td>Comprehensive evergreen resource</td></tr>
+          <tr><td class="brand">InVideo</td><td>10 Prompts Every Marketer Should Save</td><td><span class="stage mofu">MOFU</span></td><td>Carousel</td><td>LinkedIn</td><td>Saveable content that reinforces expertise</td></tr>
+          <tr><td class="brand">InVideo</td><td>Behind the Scenes: How AI Video Is Made</td><td><span class="stage tofu">TOFU</span></td><td>YouTube Demo</td><td>YouTube</td><td>Product education supporting GEO</td></tr>
+          <tr><td class="brand">DViO Digital</td><td>Is SEO Dead? Here's What AI Search Changed</td><td><span class="stage tofu">TOFU</span></td><td>Thought Leadership</td><td>LinkedIn</td><td>Timely opinion likely to earn shares and citations</td></tr>
+          <tr><td class="brand">DViO Digital</td><td>AEO vs SEO vs GEO</td><td><span class="stage tofu">TOFU</span></td><td>Comparison Guide</td><td>Blog</td><td>High-demand AI search topic</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="week-block">
+      <div class="week-label">Week 4</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Brand</th><th>Topic</th><th>Funnel Stage</th><th>Format</th><th>Channel</th><th>AI Citation Angle</th></tr>
+          <tr><td class="brand">Freshworks</td><td>Customer Support Metrics Every SaaS Leader Tracks</td><td><span class="stage mofu">MOFU</span></td><td>Checklist</td><td>Blog</td><td>Structured list for AI extraction</td></tr>
+          <tr><td class="brand">Razorpay</td><td>How Payment UX Impacts Conversion</td><td><span class="stage bofu">BOFU</span></td><td>Case Study</td><td>Blog</td><td>Data-backed conversion insights</td></tr>
+          <tr><td class="brand">Swiggy</td><td>Lessons From Building India's Largest Delivery Network</td><td><span class="stage mofu">MOFU</span></td><td>Founder Interview</td><td>YouTube</td><td>Expert interview increasing authority</td></tr>
+          <tr><td class="brand">Cross-client</td><td>Ask Me Anything: AI Search Marketing</td><td><span class="stage tofu">TOFU</span></td><td>Reddit AMA</td><td>Reddit</td><td>Community engagement and first-hand expertise</td></tr>
+          <tr><td class="brand">Cross-client</td><td>Weekly AI Search Trends Roundup</td><td><span class="stage tofu">TOFU</span></td><td>Newsletter + LinkedIn</td><td>LinkedIn</td><td>Fresh commentary increases topical authority</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Sheen Kher, <a href="mailto:kher.sheen@gmail.com">kher.sheen@gmail.com</a></footer>
+</main>
+
+</body>
+</html>

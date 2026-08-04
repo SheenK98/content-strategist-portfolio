@@ -46,6 +46,7 @@
   .jumplinks a.answer{color:var(--sage-dark); background:var(--sage-bg);}
   .jumplinks a.evidence{color:var(--coral); background:var(--coral-bg);}
   .jumplinks a.action{color:#3B4270; background:#E6E9F2;}
+  .jumplinks a.seo{color:#8A6D1F; background:#F3E9C9;}
 
   article{padding:56px 0; border-bottom:1px solid var(--line);}
   article:last-of-type{border-bottom:none;}
@@ -56,6 +57,17 @@
   .answer-tag{background:var(--sage-bg); color:var(--sage-dark);}
   .evidence-tag{background:var(--coral-bg); color:var(--coral);}
   .action-tag{background:#E6E9F2; color:#3B4270;}
+  .seo-tag{background:#F3E9C9; color:#8A6D1F;}
+
+  .seo-meta-box{background:var(--paper-2); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:18px 0;}
+  .seo-meta-row{display:flex; gap:14px; padding:8px 0; border-top:1px solid var(--line); font-size:0.9rem;}
+  .seo-meta-row:first-child{border-top:none;}
+  .seo-meta-label{font-family:var(--mono); font-size:0.68rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--slate); flex-shrink:0; width:150px;}
+  .internal-link{color:var(--sage-dark); text-decoration:underline; font-size:0.92rem;}
+  @media (max-width:600px){
+    .seo-meta-row{flex-direction:column; gap:4px;}
+    .seo-meta-label{width:auto;}
+  }
 
   article h2{font-family:var(--display); font-weight:700; font-size:1.7rem; margin:0 0 6px;}
   article .meta{font-family:var(--mono); font-size:0.76rem; color:var(--slate); margin-bottom:24px;}
@@ -88,14 +100,51 @@
 
   <div class="page-head">
     <div class="eyebrow">Writing Samples</div>
-    <h1>Three formats, one goal: getting cited</h1>
-    <p>These are full working samples, not just descriptions of formats. Each one is written for a different job an AI answer engine looks for: giving a direct answer, backing that answer with evidence, or helping a reader take the next step.</p>
+    <h1>Four formats, one goal: getting found and cited</h1>
+    <p>These are full working samples, not just descriptions of formats. Each one is written for a different job: ranking in classic search, giving a direct answer, backing that answer with evidence, or helping a reader take the next step.</p>
     <div class="jumplinks">
+      <a class="seo" href="#seo-sample">SEO content</a>
       <a class="answer" href="#answer-sample">Answer content</a>
       <a class="evidence" href="#evidence-sample">Evidence content</a>
       <a class="action" href="#action-sample">Action content</a>
     </div>
   </div>
+
+  <article id="seo-sample">
+    <span class="cat-label seo-tag">SEO content</span>
+    <h2>E-commerce Buying Guide Optimized for Organic Ranking</h2>
+    <div class="meta">Sample SEO blog post for a retail product category, with the on-page mechanics shown</div>
+    <div class="body-copy">
+      <p>Written to demonstrate classic on-page SEO craft, the kind of structural work that gets a page ranked, not just cited. AEO and SEO overlap heavily but aren't identical: this sample shows the parts that are purely about ranking, in a retail context rather than SaaS.</p>
+
+      <div class="seo-meta-box">
+        <div class="seo-meta-row"><span class="seo-meta-label">Target keyword</span><span>best running shoes for flat feet</span></div>
+        <div class="seo-meta-row"><span class="seo-meta-label">Search intent</span><span>Commercial investigation, comparing products before an online purchase</span></div>
+        <div class="seo-meta-row"><span class="seo-meta-label">Meta title</span><span>Best Running Shoes for Flat Feet in 2026, Tested and Compared</span></div>
+        <div class="seo-meta-row"><span class="seo-meta-label">Meta description</span><span>The best running shoes for flat feet this year, compared on arch support, stability, and price, with picks for new runners and marathon training.</span></div>
+      </div>
+
+      <h3>Best Running Shoes for Flat Feet in 2026, Tested and Compared</h3>
+      <p>Flat feet change how a shoe needs to fit. Without a supportive midsole and the right kind of arch structure, overpronation gets worse over long distances, which is why generic "best running shoe" lists usually aren't much help here. This guide only covers shoes tested specifically for flat-footed runners.</p>
+
+      <h3>What to look for if you have flat feet</h3>
+      <p>Three things matter more than brand name or price: stability control to reduce inward rolling of the ankle, arch support built into the midsole rather than relying on an insert, and a wider toe box, since flat feet often pair with a broader foot shape.</p>
+
+      <h3>Top picks by runner type</h3>
+      <p>The right shoe usually depends on distance and frequency rather than one universal winner, a casual 5K runner and someone training for a marathon are optimizing for different things even with the same foot type.</p>
+
+      <h3>Related reading</h3>
+      <p style="margin:0;">
+        <a href="#" class="internal-link">How to tell if you overpronate</a> &middot;
+        <a href="#" class="internal-link">Best insoles for arch support</a> &middot;
+        <a href="#" class="internal-link">Running shoe size guide by brand</a>
+      </p>
+    </div>
+    <div class="why-block">
+      <span class="why-label">On-page SEO notes</span>
+      <p>The target keyword appears in the meta title, the H1, and within the first 50 words, the pattern search engines still weight heavily for topical relevance. The meta description is written to earn the click, not just describe the page, it names concrete decision factors (arch support, stability, price) rather than a vague promise. The internal links point to pages a flat-footed runner would plausibly search next, which supports both crawl depth and topical authority for the broader running-shoe category.</p>
+    </div>
+  </article>
 
   <article id="answer-sample">
     <span class="cat-label answer-tag">Answer content</span>
